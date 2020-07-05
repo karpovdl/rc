@@ -22,7 +22,7 @@ Run the script
 
 ```bash
 cd cmd
-docker_compose up
+docker-compose up
 ```
 
 ## Testing
