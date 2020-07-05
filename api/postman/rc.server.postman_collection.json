@@ -1,0 +1,467 @@
+{
+	"info": {
+		"_postman_id": "226ff601-4efa-4d31-8115-a22369d5771b",
+		"name": "rc.server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"user.1\", \"password\": \"user.pass.1\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"user.1\", \"password\": \"user.pass.1\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_add_url",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTQwNjMzOTAsImlhdCI6MTU5Mzk3Njk5MCwidXNlciI6eyJpZCI6IjVmMDIyODc5MzVkY2JiMmI3MDJhZTlmMSIsInVzZXJuYW1lIjoidXNlci4xIn19.vZLnlRSp2L5xyBhA7QBPPqODOVftn_nt1EDZ15fWado"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"category\":\"music\",\"type\":\"link\",\"title\":\"title_link\",\"url\":\"https://a.b.url\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_add_text",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTQwNjMzOTAsImlhdCI6MTU5Mzk3Njk5MCwidXNlciI6eyJpZCI6IjVmMDIyODc5MzVkY2JiMmI3MDJhZTlmMSIsInVzZXJuYW1lIjoidXNlci4xIn19.vZLnlRSp2L5xyBhA7QBPPqODOVftn_nt1EDZ15fWado"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"category\":\"music\",\"type\":\"text\",\"title\":\"title_text\",\"text\":\"a.b.message\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_by_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/posts/5f0228bd35dcbb2b702ae9f2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts",
+						"5f0228bd35dcbb2b702ae9f2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_all_by_username",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/user.1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"user.1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_all_by_category_music",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/a/funny/music",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"a",
+						"funny",
+						"music"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_upvote_by_id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTQwNTUyNjcsImlhdCI6MTU5Mzk2ODg2NywidXNlciI6eyJpZCI6IjVlZmY0MzMzMzVkY2JiMDQwY2MxZjJjMSIsInVzZXJuYW1lIjoiYWFhMTExIn19.3PbHFfTEAvj7WYWtt_V3GhWm-zLHo1UdSTIKB_VgpjI"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/posts/5f0228bd35dcbb2b702ae9f2/upvote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts",
+						"5f0228bd35dcbb2b702ae9f2",
+						"upvote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_downvote_by_id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTQwNTUyNjcsImlhdCI6MTU5Mzk2ODg2NywidXNlciI6eyJpZCI6IjVlZmY0MzMzMzVkY2JiMDQwY2MxZjJjMSIsInVzZXJuYW1lIjoiYWFhMTExIn19.3PbHFfTEAvj7WYWtt_V3GhWm-zLHo1UdSTIKB_VgpjI"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/posts/5f0228bd35dcbb2b702ae9f2/downvote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts",
+						"5f0228bd35dcbb2b702ae9f2",
+						"downvote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_add_comment_by_id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTQwNTUyNjcsImlhdCI6MTU5Mzk2ODg2NywidXNlciI6eyJpZCI6IjVlZmY0MzMzMzVkY2JiMDQwY2MxZjJjMSIsInVzZXJuYW1lIjoiYWFhMTExIn19.3PbHFfTEAvj7WYWtt_V3GhWm-zLHo1UdSTIKB_VgpjI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"comment\":\"a.b.comment\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/posts/5f0228bd35dcbb2b702ae9f2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts",
+						"5f0228bd35dcbb2b702ae9f2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_delete_comment_by_id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTQwNTUyNjcsImlhdCI6MTU5Mzk2ODg2NywidXNlciI6eyJpZCI6IjVlZmY0MzMzMzVkY2JiMDQwY2MxZjJjMSIsInVzZXJuYW1lIjoiYWFhMTExIn19.3PbHFfTEAvj7WYWtt_V3GhWm-zLHo1UdSTIKB_VgpjI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"comment\":\"a.b.comment\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/posts/5f0228bd35dcbb2b702ae9f2/5f0229df35dcbb2b702ae9f4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts",
+						"5f0228bd35dcbb2b702ae9f2",
+						"5f0229df35dcbb2b702ae9f4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_delete_by_id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTQwNjMzNTUsImlhdCI6MTU5Mzk3Njk1NSwidXNlciI6eyJpZCI6IjVmMDIyODc5MzVkY2JiMmI3MDJhZTlmMSIsInVzZXJuYW1lIjoidXNlci4xIn19.fhbodHwwmkw9AWXK2kudn3kvhoAfksKghmY_N62LxOs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/posts/5f0228bd35dcbb2b702ae9f2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts",
+						"5f0228bd35dcbb2b702ae9f2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
