@@ -27,5 +27,5 @@ docker_compose up
 
 ## Testing
 
-[Samples](./SAMPLES.md)
-[Postman collection](./api/postman/)
+* [Samples](./SAMPLES.md)
+* [Postman collection](./api/postman/)
