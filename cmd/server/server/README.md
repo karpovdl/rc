@@ -11,3 +11,4 @@
 :green_book: [Samples](./SAMPLES.md)
 :green_book: [Tests](./TESTS.md)
 
+This is a sample server Reddit clone on golang.
